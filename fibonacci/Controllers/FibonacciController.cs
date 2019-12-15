@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
 
+using fibonacci.Services;
+
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 
 namespace fibonacci.Controllers
 {
@@ -9,17 +10,18 @@ namespace fibonacci.Controllers
     [ApiController]
     public class FibonacciController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
+        private readonly IFibonacciService _service;
 
-        public FibonacciController(IConfiguration configuration)
+        public FibonacciController(IFibonacciService service)
         {
-            _configuration = configuration;
+            _service = service;
         }
 
         [HttpGet("next/{currentNumber}")]
         public async Task<IActionResult> NextFibonacciNumber(int currentNumber)
         {
-            var nextNumber = 1;
+            var nextNumber = await _service.GetNextNumberAsync(currentNumber);
+
             return Ok(nextNumber);
         }
     }
