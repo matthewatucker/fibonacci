@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fibonacci", "fibonacci\fibonacci.csproj", "{FB94377E-05DB-4773-87F1-CE24562FC77B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci.UnitTests", "..\Fibonacci.Tests\Fibonacci.UnitTests.csproj", "{B80069B5-F508-412C-93F1-3B3875D81E5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fibonacci.UnitTests", "..\Fibonacci.Tests\Fibonacci.UnitTests.csproj", "{B80069B5-F508-412C-93F1-3B3875D81E5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ADBEF2B2-70B7-4BEA-91E2-3DB14C1EB4EC}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -27,8 +27,9 @@ namespace fibonacci.Repositories
                 _context.FibonacciNumbers.Add(fibonacciNumber);
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateException ex)
+            catch (DbUpdateException)
             {
+                //If we get a db exception, it is most likely a duplicate entry, so its safe to ignore.
                 return;
             }
         }
