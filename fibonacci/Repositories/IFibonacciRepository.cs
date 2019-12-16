@@ -6,7 +6,8 @@ namespace fibonacci.Repositories
 {
     public interface IFibonacciRepository
     {
-        Task<FibonacciNumber> GetNextNumber(int currentNumber);
-        Task<FibonacciNumber> GetClosestNumber(int currentNumber)
+        Task<FibonacciNumber> GetFibonacciNumber(int currentNumber);
+        Task<FibonacciNumber> GetClosestNumber(int currentNumber);
+        Task Add(FibonacciNumber fibonacciNumber);
     }
 }

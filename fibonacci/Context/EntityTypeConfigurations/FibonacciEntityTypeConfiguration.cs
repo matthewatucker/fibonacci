@@ -9,7 +9,10 @@ namespace fibonacci.Context
     {
         public void Configure(EntityTypeBuilder<FibonacciNumber> builder)
         {
-            builder.HasIndex(fn => fn.Value);
+            builder.HasKey(fn => fn.Id);
+
+            builder.HasIndex(fn => fn.Value)
+                .IsUnique();
 
             builder.Property(fn => fn.Value)
                 .IsRequired();
