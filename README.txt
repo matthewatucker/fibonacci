@@ -13,7 +13,6 @@ Update-Database
 -- OUTSTANDING ITEMS --
 Logging: Add a logging framework such as log4net or Serilog to the DI.
 Security: Add an API key verification to the endpoints.
-Integration Tests: Add a new project Fobonacci.IntegrationTests to the solution.
 Configuration: Add additional configuration to control input validation (is the input a fibonacci number), specify default Fibonacci number (currently it is {n: 2, xn:1})
 Auto-Database-Migration: Add to startup the ability to create the database if it does not exist.
 Code-Coverage: Add Code-Coverage framework to the solution to monitor unit tests.
