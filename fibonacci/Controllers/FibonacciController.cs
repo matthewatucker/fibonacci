@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 
-using fibonacci.Services;
+using Fibonacci.Services;
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace fibonacci.Controllers
+namespace Fibonacci.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]

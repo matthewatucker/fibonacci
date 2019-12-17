@@ -1,6 +1,6 @@
-using fibonacci.Context;
-using fibonacci.Repositories;
-using fibonacci.Services;
+using Fibonacci.Context;
+using Fibonacci.Repositories;
+using Fibonacci.Services;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace fibonacci
+namespace Fibonacci
 {
     public class Startup
     {

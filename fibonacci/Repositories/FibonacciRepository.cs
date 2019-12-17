@@ -2,12 +2,12 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-using fibonacci.Context;
-using fibonacci.Models;
+using Fibonacci.Context;
+using Fibonacci.Models;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace fibonacci.Repositories
+namespace Fibonacci.Repositories
 {
     public class FibonacciRepository : IFibonacciRepository
     {
@@ -18,7 +18,7 @@ namespace fibonacci.Repositories
             _context = context;
         }
 
-        public async Task Add(FibonacciNumber fibonacciNumber)
+        public async Task AddAsync(FibonacciNumber fibonacciNumber)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace fibonacci.Repositories
             }
         }
 
-        public async Task<FibonacciNumber> GetClosestNumber(int currentNumber)
+        public async Task<FibonacciNumber> GetClosestNumberAsync(int currentNumber)
         {
             var closestNumber = await Task.Run(() =>
             {
@@ -44,7 +44,7 @@ namespace fibonacci.Repositories
             return closestNumber;
         }
 
-        public async Task<FibonacciNumber> GetFibonacciNumber(int currentNumber)
+        public async Task<FibonacciNumber> GetFibonacciNumberAsync(int currentNumber)
         {
             var nextNumber = await _context.FibonacciNumbers.SingleOrDefaultAsync(fn => fn.Value == currentNumber);
 

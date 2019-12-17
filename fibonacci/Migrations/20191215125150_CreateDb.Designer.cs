@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using fibonacci.Context;
+using Fibonacci.Context;
 
-namespace fibonacci.Migrations
+namespace Fibonacci.Migrations
 {
     [DbContext(typeof(FibonacciDbContext))]
     [Migration("20191215125150_CreateDb")]

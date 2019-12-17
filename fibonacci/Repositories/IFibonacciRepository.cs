@@ -1,13 +1,13 @@
 ﻿using System.Threading.Tasks;
 
-using fibonacci.Models;
+using Fibonacci.Models;
 
-namespace fibonacci.Repositories
+namespace Fibonacci.Repositories
 {
     public interface IFibonacciRepository
     {
-        Task<FibonacciNumber> GetFibonacciNumber(int currentNumber);
-        Task<FibonacciNumber> GetClosestNumber(int currentNumber);
-        Task Add(FibonacciNumber fibonacciNumber);
+        Task<FibonacciNumber> GetFibonacciNumberAsync(int currentNumber);
+        Task<FibonacciNumber> GetClosestNumberAsync(int currentNumber);
+        Task AddAsync(FibonacciNumber fibonacciNumber);
     }
 }

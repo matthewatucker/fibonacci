@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 
-using fibonacci.Models;
-using fibonacci.Repositories;
+using Fibonacci.Models;
+using Fibonacci.Repositories;
 
-namespace fibonacci.Services
+namespace Fibonacci.Services
 {
     public class FibonacciService : IFibonacciService
     {
@@ -16,14 +16,14 @@ namespace fibonacci.Services
 
         public async Task<int> GetNextNumberAsync(int currentNumber)
         {
-            var fibonacciNumber = await _repository.GetFibonacciNumber(currentNumber);
+            var fibonacciNumber = await _repository.GetFibonacciNumberAsync(currentNumber);
 
             if (fibonacciNumber != null)
             {
                 return fibonacciNumber.Next;
             }
 
-            fibonacciNumber = await _repository.GetClosestNumber(currentNumber) ?? new FibonacciNumber { Value = 1, Previous = 1, Next = 2 };
+            fibonacciNumber = await _repository.GetClosestNumberAsync(currentNumber) ?? new FibonacciNumber { Value = 1, Previous = 1, Next = 2 };
 
             while (fibonacciNumber.Value <= currentNumber)
             {
@@ -38,7 +38,7 @@ namespace fibonacci.Services
                     Previous = newPrevious
                 };
 
-                await _repository.Add(fn);
+                await _repository.AddAsync(fn);
 
                 fibonacciNumber = fn;
             }

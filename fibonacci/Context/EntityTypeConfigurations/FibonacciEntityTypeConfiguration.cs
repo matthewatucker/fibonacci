@@ -1,9 +1,9 @@
-﻿using fibonacci.Models;
+﻿using Fibonacci.Models;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace fibonacci.Context
+namespace Fibonacci.Context
 {
     public class FibonacciEntityTypeConfiguration : IEntityTypeConfiguration<FibonacciNumber>
     {

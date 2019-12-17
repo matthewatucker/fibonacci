@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace fibonacci.Migrations
+namespace Fibonacci.Migrations
 {
     public partial class Add_Unique_Constraint_To_FibonacciNumber : Migration
     {

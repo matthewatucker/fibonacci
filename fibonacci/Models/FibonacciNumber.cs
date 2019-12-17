@@ -1,4 +1,4 @@
-﻿namespace fibonacci.Models
+﻿namespace Fibonacci.Models
 {
     public class FibonacciNumber
     {

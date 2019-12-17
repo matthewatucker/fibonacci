@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using fibonacci.Context;
+using Fibonacci.Context;
 
-namespace fibonacci.Migrations
+namespace Fibonacci.Migrations
 {
     [DbContext(typeof(FibonacciDbContext))]
     partial class FibonacciDbContextModelSnapshot : ModelSnapshot

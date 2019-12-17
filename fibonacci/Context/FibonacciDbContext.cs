@@ -1,8 +1,8 @@
-﻿using fibonacci.Models;
+﻿using Fibonacci.Models;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace fibonacci.Context
+namespace Fibonacci.Context
 {
     public class FibonacciDbContext : DbContext
     {
